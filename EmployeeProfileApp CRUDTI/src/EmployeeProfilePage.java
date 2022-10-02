@@ -48,23 +48,23 @@ public class EmployeeProfilePage extends JFrame{
                 JOptionPane.showMessageDialog(saveButton,  "Deleted successfully!");
             }
         });
-//        image.addMouseListener(new MouseAdapter() {
-//            @Override
-//            public void mouseClicked(MouseEvent e) {
-//                super.mouseClicked(e);
-//                JFileChooser chooser = new JFileChooser();
-//                int ch = chooser.showOpenDialog(null);
-//
-//                if(ch==JFileChooser.APPROVE_OPTION){
-//                    try {
-//                        image1 = ImageIO.read(chooser.getSelectedFile());
-//                    } catch (IOException ex) {
-//                        JOptionPane.showMessageDialog(null,  "Can't load image");
-//                    }
-//                }
-//                showImage();
-//            }
-//        });
+       image.addMouseListener(new MouseAdapter() {
+           @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                JFileChooser chooser = new JFileChooser();
+                int ch = chooser.showOpenDialog(null);
+
+                if(ch==JFileChooser.APPROVE_OPTION){
+                    try {
+                        image1 = ImageIO.read(chooser.getSelectedFile());
+                    } catch (IOException ex) {
+                        JOptionPane.showMessageDialog(null,  "Can't load image");
+                   }
+                }
+                showImage();
+            }
+        });
     }
 
     public void setData(Employee e) {
@@ -82,9 +82,9 @@ public class EmployeeProfilePage extends JFrame{
         showImage();
     }
 
-//    private void showImage() {
-//        if(Objects.nonNull(image1)){
-//            image.setIcon(new ImageIcon(image1));
-//        }
-//    }
+   private void showImage() {
+        if(Objects.nonNull(image1)){
+           image.setIcon(new ImageIcon(image1));
+      }
+    }
 }
